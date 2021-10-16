@@ -38,12 +38,10 @@ This application uses as backend, an api developed with Node.js and a Postgres d
 <br/>
 
 <p>
-<img src="./lib/assets/images/home.jpg" alt="main page" width="100">
-<img src="./lib/assets/images/drawer.jpg" alt="drawer" width="100">
-</p>
-<p>
-<img src="./lib/assets/images/list.jpg" alt="list" width="100">
-<img src="./lib/assets/images/detail.jpg" alt="detail" width="100">
+<img src="./lib/assets/images/home.jpg" alt="main page" width="200">
+<img src="./lib/assets/images/drawer.jpg" alt="drawer" width="200">
+<img src="./lib/assets/images/list.jpg" alt="list" width="200">
+<img src="./lib/assets/images/detail.jpg" alt="detail" width="200">
 </p>
 
     
