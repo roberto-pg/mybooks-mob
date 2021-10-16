@@ -37,35 +37,16 @@ This application uses as backend, an api developed with Node.js and a Postgres d
 ## 📸 Screenshot of pages:
 <br/>
 
+<p>
+<img src="./lib/assets/images/home.jpg" alt="main page" width="100">
+<img src="./lib/assets/images/drawer.jpg" alt="drawer" width="100">
+</p>
+<p>
+<img src="./lib/assets/images/list.jpg" alt="list" width="100">
+<img src="./lib/assets/images/detail.jpg" alt="detail" width="100">
+</p>
 
-<div class="row">
-  <div class="coluna">
-  <strong>Main Page</strong>
-    <img src="./lib/assets/images/home.jpg" alt="descrição da imagem" style="width:95%">
-  </div>
-  <strong>Drawer</strong>
-  <div class="coluna">
-    <img src="./lib/assets/images/drawer.jpg" alt="descrição da imagem" style="width:95%">
-  </div>
-  <div class="coluna">
-  <br/>
-  <strong>Book list</strong>
-    <img src="./lib/assets/images/list.jpg" alt="descrição da imagem" style="width:95%">
-  </div>
-  <div class="coluna">
-  <br/>
-  <strong>Details</strong>
-    <img src="./lib/assets/images/detail.jpg" alt="descrição da imagem" style="width:95%">
-  </div>
-  </div>
-
-<style>
-  .coluna{
-  float: left;
-  width: 50%;
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
+    
+  
+    
+  
