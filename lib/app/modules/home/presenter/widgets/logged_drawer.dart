@@ -91,7 +91,7 @@ loggedDrawer(
         ),
         GestureDetector(
           onTap: () {
-            Modular.to.pushNamed('/book/addBook');
+            Modular.to.navigate('/book/addBook');
             Modular.to.pop();
           },
           child: ListTile(

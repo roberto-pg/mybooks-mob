@@ -60,7 +60,7 @@ class BookPageState extends ModularState<BookPage, BookStore> {
                   child: GestureDetector(
                     onLongPress: () {
                       Modular.to
-                          .pushNamed('./detail', arguments: books[index].id);
+                          .navigate('./detail', arguments: books[index].id);
                     },
                     child: Card(
                       elevation: 5.0,

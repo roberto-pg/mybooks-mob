@@ -35,6 +35,12 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Modular.to.navigate('/home/');
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
         title: Text(
           'Meu livro novo',
           style: TextStyle(

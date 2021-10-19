@@ -10,7 +10,7 @@ class AddStore {
   Future<void> addBook(params) async {
     try {
       await _addBook.call(params);
-      Modular.to.navigate('/');
+      Modular.to.navigate('/home/');
     } on Exception catch (e) {
       print(e);
       dialogFactory(

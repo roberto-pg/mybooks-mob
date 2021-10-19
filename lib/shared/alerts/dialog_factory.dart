@@ -19,7 +19,7 @@ dialogFactory(
                   child: Text(confirm),
                   onPressed: () => [
                         executeFunction(),
-                        Modular.to.navigate('/'),
+                        Modular.to.navigate('/home/'),
                         Navigator.pop(context),
                       ]),
               TextButton(

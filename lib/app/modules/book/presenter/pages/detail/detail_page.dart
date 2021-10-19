@@ -28,6 +28,12 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Modular.to.navigate('/home/');
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
         title: Text('Alterar ou excluir',
             style: TextStyle(
               color: Colors.black45,
