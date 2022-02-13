@@ -9,7 +9,7 @@ class User extends Equatable {
   final String password;
   final String? token;
 
-  User({
+  const User({
     this.id,
     this.name,
     required this.email,

@@ -1,3 +1,4 @@
+
 import 'package:dio/dio.dart';
 import 'package:my_books/app/modules/book/external/book_model.dart';
 import 'package:my_books/app/modules/book/infra/datasources/book_datasource.dart';
@@ -16,9 +17,8 @@ class BookDatasourceImpl implements IBookDatasource {
       await _customDioAuth.post('/books', data: params);
     } on DioError catch (e) {
       if (e.type.toString() == 'DioErrorType.other') {
-        throw BookException('Problema inesperado no servidor');
+        throw const BookException('Problema inesperado no servidor');
       } else {
-        print(e.response?.statusCode);
         throw BookException(e.response?.data['Error']);
       }
     }

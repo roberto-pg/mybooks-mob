@@ -19,20 +19,18 @@ class SplashPageState extends ModularState<SplashPage, SplashStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFffffff),
-      body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Center(
-              child: Image.asset(
-                'lib/assets/images/capa.jpg',
-                fit: BoxFit.fill,
-                width: 150,
-              ),
+      backgroundColor: const Color(0xFFffffff),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Center(
+            child: Image.asset(
+              'lib/assets/images/capa.jpg',
+              fit: BoxFit.fill,
+              width: 150,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -31,9 +31,9 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
           onPressed: () {
             Modular.to.navigate('/home/');
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
-        title: Text('Alterar ou excluir',
+        title: const Text('Alterar ou excluir',
             style: TextStyle(
               color: Colors.black45,
               fontFamily: 'Pacifico',
@@ -42,7 +42,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
       ),
       body: ScopedBuilder<DetailStore, Exception, BookModel>(
         store: store,
-        onLoading: (context) => Center(
+        onLoading: (context) => const Center(
           child: CircularProgressIndicator(),
         ),
         onState: (_, book) {
@@ -55,14 +55,14 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                     alignment: Alignment.topLeft,
                     fit: BoxFit.cover,
                     width: 140.0),
-                Divider(
+                const Divider(
                   color: Colors.black38,
                   thickness: 1,
                 ),
                 Text(
                   book.title,
                   style: GoogleFonts.patrickHandSc(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color: Colors.black87,
                       fontSize: 17,
                       fontWeight: FontWeight.w600,
@@ -72,7 +72,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                 Text(
                   book.author,
                   style: GoogleFonts.patrickHandSc(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color: Colors.black54,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -82,7 +82,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                 Text(
                   book.nationality,
                   style: GoogleFonts.patrickHandSc(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color: Colors.black54,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -92,7 +92,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                 Text(
                   book.year.toString(),
                   style: GoogleFonts.patrickHandSc(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color: Colors.black54,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
@@ -102,7 +102,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                 Text(
                   book.read == true ? ' Lido ' : ' Não lido ',
                   style: GoogleFonts.patrickHandSc(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color: Colors.black87,
                       backgroundColor: Colors.pinkAccent,
                       fontSize: 15,
@@ -110,14 +110,14 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                     ),
                   ),
                 ),
-                Divider(
+                const Divider(
                   color: Colors.black38,
                   thickness: 1,
                 ),
                 Text(
                   'Já leu o livro?',
                   style: GoogleFonts.patrickHandSc(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color: Colors.black54,
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
@@ -129,7 +129,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                     Text(
                       'Sim',
                       style: GoogleFonts.patrickHandSc(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Colors.black54,
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
@@ -144,11 +144,11 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                             _radioValue = value!;
                           });
                         }),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     Text(
                       'Ainda não',
                       style: GoogleFonts.patrickHandSc(
-                        textStyle: TextStyle(
+                        textStyle: const TextStyle(
                           color: Colors.black54,
                           fontSize: 20,
                           fontWeight: FontWeight.w700,
@@ -171,7 +171,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        child: Text("Alterar"),
+                        child: const Text("Alterar"),
                         style: ElevatedButton.styleFrom(
                           primary: Theme.of(context).primaryColorDark,
                           elevation: 4.0,
@@ -188,7 +188,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                         },
                       ),
                       ElevatedButton(
-                        child: Text("Excluir"),
+                        child: const Text("Excluir"),
                         style: ElevatedButton.styleFrom(
                           primary: Theme.of(context).primaryColorDark,
                           elevation: 4.0,
@@ -210,7 +210,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
             ),
           );
         },
-        onError: (context, error) => Center(
+        onError: (context, error) => const Center(
           child: Text(
             'Can`t get the Data',
             style: TextStyle(color: Colors.red),

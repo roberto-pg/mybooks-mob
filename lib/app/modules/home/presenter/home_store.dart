@@ -14,7 +14,7 @@ class HomeStore extends NotifierStore<Exception, TotalBookModel> {
     required GetTotalBooksByRead getTotalBooksByRead,
   })  : _storage = storage,
         _getTotalBooksByRead = getTotalBooksByRead,
-        super(TotalBookModel(
+        super(const TotalBookModel(
           name: '',
           allBooks: '',
           readBooks: '',
@@ -28,7 +28,7 @@ class HomeStore extends NotifierStore<Exception, TotalBookModel> {
   Future<void> getTotalBooksByRead() async {
     try {
       setLoading(true);
-      TotalBook totalBook = TotalBook(
+      TotalBook totalBook = const TotalBook(
         name: '',
         allBooks: '',
         readBooks: '',
@@ -51,7 +51,7 @@ class HomeStore extends NotifierStore<Exception, TotalBookModel> {
       update(totalsForDrawer);
       setLoading(false);
     } on Exception catch (e) {
-      setError(BookException('${e.toString()}'));
+      setError(BookException(e.toString()));
     }
   }
 }

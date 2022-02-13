@@ -38,7 +38,7 @@ class BookPageState extends ModularState<BookPage, BookStore> {
     return Scaffold(
       appBar: AppBar(
         title: Text(title!,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black45,
               fontFamily: 'Pacifico',
               fontSize: 25,
@@ -47,7 +47,7 @@ class BookPageState extends ModularState<BookPage, BookStore> {
       body: ScopedBuilder<BookStore, Exception, List<BookModel>>(
         store: store,
         onLoading: (context) =>
-            Center(child: CircularProgressIndicator.adaptive()),
+            const Center(child: CircularProgressIndicator.adaptive()),
         onState: (_, books) {
           if (books.isEmpty) {
             return Container();
@@ -65,9 +65,9 @@ class BookPageState extends ModularState<BookPage, BookStore> {
                     child: Card(
                       elevation: 5.0,
                       shadowColor: Colors.blue,
-                      child: new Column(
+                      child: Column(
                         children: <Widget>[
-                          new Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -82,47 +82,47 @@ class BookPageState extends ModularState<BookPage, BookStore> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                child: new Column(
+                                child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Padding(
                                       padding: const EdgeInsets.all(4.0),
-                                      child: new Text(
+                                      child: Text(
                                         books[index].title,
                                         style: GoogleFonts.patrickHandSc(
-                                            textStyle: TextStyle(
+                                            textStyle: const TextStyle(
                                                 fontSize: 13,
                                                 fontWeight: FontWeight.bold)),
                                       ),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(4.0),
-                                      child: new Text(
+                                      child: Text(
                                         books[index].year.toString(),
                                         style: GoogleFonts.patrickHandSc(
-                                            textStyle: TextStyle(
+                                            textStyle: const TextStyle(
                                                 fontSize: 13,
                                                 fontWeight: FontWeight.bold)),
                                       ),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(4.0),
-                                      child: new Text(
+                                      child: Text(
                                         books[index].author,
                                         style: GoogleFonts.patrickHandSc(
-                                            textStyle: TextStyle(
+                                            textStyle: const TextStyle(
                                                 fontSize: 12,
                                                 fontWeight: FontWeight.bold)),
                                       ),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: new Text(
+                                      child: Text(
                                           books[index].read == true
                                               ? 'Lido'
                                               : 'Não lido',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 16.0,
                                               color: Colors.black,
                                               backgroundColor: Colors.red,
@@ -140,7 +140,7 @@ class BookPageState extends ModularState<BookPage, BookStore> {
                 );
               });
         },
-        onError: (context, error) => Center(
+        onError: (context, error) => const Center(
           child: Text(
             'Can`t get the Data',
             style: TextStyle(color: Colors.red),

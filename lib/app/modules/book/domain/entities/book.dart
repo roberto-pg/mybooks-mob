@@ -11,7 +11,7 @@ class Book extends Equatable {
   final int year;
   final bool read;
 
-  Book({
+  const Book({
     this.id,
     required this.title,
     required this.author,

@@ -14,7 +14,7 @@ class AppModule extends Module {
   @override
   final List<Bind> binds = [
     Bind.singleton((i) => Dio()),
-    Bind.singleton((i) => FlutterSecureStorage()),
+    Bind.singleton((i) => const FlutterSecureStorage()),
     Bind.singleton((i) => CustomDio()),
     Bind.singleton((i) => CustomDioAuth(storage: i())),
     Bind.singleton((i) => SplashStore(storage: i())),
@@ -22,7 +22,7 @@ class AppModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/', child: (_, args) => SplashPage()),
+    ChildRoute('/', child: (_, args) => const SplashPage()),
     ModuleRoute('/auth', module: AuthModule()),
     ModuleRoute('/home', module: HomeModule()),
     ModuleRoute('/book', module: BookModule())

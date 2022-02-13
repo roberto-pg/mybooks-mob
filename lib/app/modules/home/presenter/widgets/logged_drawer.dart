@@ -32,7 +32,7 @@ loggedDrawer(
                   Text(
                     name.toString(),
                     style: GoogleFonts.pacifico(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         color: Colors.black,
                         fontSize: 20,
                       ),
@@ -41,7 +41,7 @@ loggedDrawer(
                   Text(
                     'Minhas leituras',
                     style: GoogleFonts.pacifico(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                         color: Colors.black,
                         fontSize: 15,
                       ),
@@ -50,7 +50,7 @@ loggedDrawer(
                 ],
               ),
             ),
-            decoration: BoxDecoration(color: Colors.blue),
+            decoration: const BoxDecoration(color: Colors.blue),
           ),
         ),
         GestureDetector(
@@ -59,7 +59,7 @@ loggedDrawer(
             Modular.to.pop();
           },
           child: ListTile(
-            leading: Icon(Icons.library_books),
+            leading: const Icon(Icons.library_books),
             title: Text('Minha estante', style: GoogleFonts.pacifico()),
             trailing: Text(allTheBooks == null ? '' : allTheBooks + ' livros',
                 style: GoogleFonts.pacifico()),
@@ -71,7 +71,7 @@ loggedDrawer(
             Modular.to.pop();
           },
           child: ListTile(
-            leading: Icon(Icons.check_box),
+            leading: const Icon(Icons.check_box),
             title: Text('Livros lidos', style: GoogleFonts.pacifico()),
             trailing: Text(readBooks == null ? '' : readBooks + ' livros',
                 style: GoogleFonts.pacifico()),
@@ -83,7 +83,7 @@ loggedDrawer(
             Modular.to.pop();
           },
           child: ListTile(
-            leading: Icon(Icons.check_box_outline_blank),
+            leading: const Icon(Icons.check_box_outline_blank),
             title: Text('Livros não lidos', style: GoogleFonts.pacifico()),
             trailing: Text(unreadBooks == null ? '' : unreadBooks + ' livros',
                 style: GoogleFonts.pacifico()),
@@ -95,7 +95,7 @@ loggedDrawer(
             Modular.to.pop();
           },
           child: ListTile(
-            leading: Icon(Icons.fiber_new),
+            leading: const Icon(Icons.fiber_new),
             title: Text(
               'Novo livro',
               style: GoogleFonts.pacifico(),

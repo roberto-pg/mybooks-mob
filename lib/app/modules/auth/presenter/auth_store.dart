@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter_triple/flutter_triple.dart';
 import 'package:my_books/app/modules/auth/domain/usecases/user_auth.dart';
 import 'package:my_books/app/modules/auth/external/user_model.dart';
@@ -8,7 +10,7 @@ class AuthStore extends StreamStore<BookException, UserModel> {
 
   AuthStore({required UserAuth userAuth})
       : _userAuth = userAuth,
-        super(UserModel(
+        super(const UserModel(
           email: '',
           password: '',
         ));
@@ -25,9 +27,9 @@ class AuthStore extends StreamStore<BookException, UserModel> {
       update(response, force: true);
       setLoading(false);
     } catch (e, s) {
-      print(e);
-      print(s);
-      setError(BookException('${e.toString()}'), force: true);
+      log(e.toString());
+      log(s.toString());
+      setError(BookException(e.toString()), force: true);
     }
   }
 }

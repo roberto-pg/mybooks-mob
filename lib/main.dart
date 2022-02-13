@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -9,8 +11,8 @@ Future<void> main() async {
   await dotenv.load();
 
   Modular.to.addListener(() {
-    print(Modular.to.path);
+    log(Modular.to.path);
   });
 
-  runApp(ModularApp(module: AppModule(), child: AppWidget()));
+  runApp(ModularApp(module: AppModule(), child: const AppWidget()));
 }

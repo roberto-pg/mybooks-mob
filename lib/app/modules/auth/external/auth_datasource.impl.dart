@@ -17,7 +17,7 @@ class AuthDatasourceImpl implements IAuthDatasource {
       return UserModel.fromJson(response.data['user']);
     } on DioError catch (e) {
       if (e.type.toString() == 'DioErrorType.other') {
-        throw BookException('Problema inesperado no servidor');
+        throw const BookException('Problema inesperado no servidor');
       } else {
         throw BookException(e.response?.data['Error']);
       }
