@@ -14,9 +14,9 @@ dependencies:
   flutter_triple: ^1.2.4+3
   equatable: ^2.0.3
   dio: ^4.0.0
-  flutter_secure_storage: ^4.2.1
+  flutter_secure_storage: ^5.0.2
   google_fonts: ^2.1.0
-  connectivity_plus: ^1.1.0
+  connectivity_plus: ^2.2.0
   asuka: ^2.0.0-nullsafety.3
   animated_card: ^2.0.0
   image_picker: ^0.8.4+2
