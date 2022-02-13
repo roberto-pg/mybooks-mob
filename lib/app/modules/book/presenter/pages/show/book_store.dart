@@ -22,7 +22,7 @@ class BookStore extends NotifierStore<Exception, List<BookModel>> {
       update(response);
       setLoading(false);
     } on DioError catch (e) {
-      setError(BookException('${e.toString()}'), force: true);
+      setError(BookException(e.toString()), force: true);
     }
   }
 
@@ -33,7 +33,7 @@ class BookStore extends NotifierStore<Exception, List<BookModel>> {
       update(response);
       setLoading(false);
     } on DioError catch (e) {
-      setError(BookException('${e.toString()}'), force: true);
+      setError(BookException(e.toString()), force: true);
     }
   }
 }

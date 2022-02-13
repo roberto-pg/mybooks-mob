@@ -27,13 +27,13 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
       store: store,
       onState: (_, totalForDrawer) {
         return Scaffold(
-          backgroundColor: Color(0xFFffffff),
+          backgroundColor: const Color(0xFFffffff),
           appBar: AppBar(
             centerTitle: true,
             title: Text(
               'Minha biblioteca',
               style: GoogleFonts.pacifico(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   color: Colors.black45,
                   fontSize: 25,
                 ),
@@ -41,11 +41,11 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
             ),
           ),
           drawer: loggedDrawer(
-            '${totalForDrawer.name}',
+            totalForDrawer.name,
             store.logoutUser,
-            '${totalForDrawer.allBooks}',
-            '${totalForDrawer.readBooks}',
-            '${totalForDrawer.unreadBooks}',
+            totalForDrawer.allBooks,
+            totalForDrawer.readBooks,
+            totalForDrawer.unreadBooks,
           ),
           body: SingleChildScrollView(
             child: Center(
@@ -55,10 +55,10 @@ class _HomePageState extends ModularState<HomePage, HomeStore> {
                   AnimatedCard(
                     direction: AnimatedCardDirection.left,
                     duration: const Duration(milliseconds: 1500),
-                    child: Center(
+                    child: const Center(
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 30),
-                        child: Text('Lista' + '\n' 'de' + '\n' 'leitura',
+                        padding: EdgeInsets.only(top: 30),
+                        child: Text('Lista' '\n' 'de' '\n' 'leitura',
                             style: TextStyle(
                               color: Colors.black54,
                               fontFamily: 'Pacifico',

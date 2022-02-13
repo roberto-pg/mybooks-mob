@@ -9,6 +9,7 @@ class TotalBookDatasourceImpl implements ITotalBookDatasource {
   TotalBookDatasourceImpl({required CustomDioAuth customDioAuth})
       : _customDioAuth = customDioAuth;
 
+  @override
   Future<String?> getBooksByRead(String read) async {
     try {
       final response = await _customDioAuth.get<List>('/books/read/$read');

@@ -1,7 +1,7 @@
 import 'package:my_books/app/modules/auth/domain/entities/user.dart';
 
 class UserModel extends User {
-  UserModel({
+  const UserModel({
     String? id,
     String? name,
     required String email,

@@ -1,7 +1,7 @@
 import 'package:my_books/app/modules/home/domain/entities/total_book.dart';
 
 class TotalBookModel extends TotalBook {
-  TotalBookModel({
+  const TotalBookModel({
     required String name,
     required String allBooks,
     required String readBooks,

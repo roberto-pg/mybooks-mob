@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -20,7 +21,7 @@ class AddBookPage extends StatefulWidget {
 class _AddBookState extends ModularState<AddBookPage, AddStore> {
   final _formKey = GlobalKey<FormState>();
   File? imageBook;
-  Book book = Book(
+  Book book = const Book(
     title: '',
     author: '',
     nationality: '',
@@ -37,9 +38,9 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
           onPressed: () {
             Modular.to.navigate('/home/');
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
-        title: Text(
+        title: const Text(
           'Meu livro novo',
           style: TextStyle(
             color: Colors.black45,
@@ -68,7 +69,7 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
                     book = book.copyWith(title: text);
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Autor',
@@ -82,7 +83,7 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
                     book = book.copyWith(author: text);
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: 'País',
@@ -97,7 +98,7 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
                     book = book.copyWith(nationality: text);
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextFormField(
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
@@ -114,17 +115,17 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
                         year: (text != null) ? int.parse(text) : 0000);
                   },
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(children: [
-                  Text('Escolha uma foto'),
-                  Padding(padding: const EdgeInsets.only(right: 50)),
-                  Container(
+                  const Text('Escolha uma foto'),
+                  const Padding(padding: EdgeInsets.only(right: 50)),
+                  SizedBox(
                     width: 50,
                     height: 50,
                     child: OutlinedButton(
                       onPressed: openGallery,
                       child: imageBook == null
-                          ? Icon(Icons.camera_alt)
+                          ? const Icon(Icons.camera_alt)
                           : Image.file(imageBook!),
                       style: ElevatedButton.styleFrom(
                         primary: Colors.white,
@@ -133,15 +134,15 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
                     ),
                   )
                 ]),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 SizedBox(
                   width: double.infinity,
                   height: 50,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       primary: Colors.blue,
-                      shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(5),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
                       ),
                     ),
                     onPressed: () async {
@@ -206,7 +207,7 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
         imageBook = File(image!.path);
       });
     } catch (e) {
-      print(e);
+      log(e.toString());
     }
   }
 }

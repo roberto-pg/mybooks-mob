@@ -18,7 +18,7 @@ class AuthPage extends StatefulWidget {
 class _AuthPageState extends ModularState<AuthPage, AuthStore> {
   final _formKey = GlobalKey<FormState>();
   bool obscuredTextPassword = true;
-  User user = User(
+  User user = const User(
     id: '',
     email: '',
     password: '',
@@ -44,12 +44,12 @@ class _AuthPageState extends ModularState<AuthPage, AuthStore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFffffff),
+      backgroundColor: const Color(0xFFffffff),
       appBar: AppBar(
         title: Text(
           'Login',
           style: GoogleFonts.pacifico(
-              textStyle: TextStyle(color: Colors.black45, fontSize: 25)),
+              textStyle: const TextStyle(color: Colors.black45, fontSize: 25)),
         ),
       ),
       body: SingleChildScrollView(
@@ -72,7 +72,7 @@ class _AuthPageState extends ModularState<AuthPage, AuthStore> {
                         vertical: 18, horizontal: 40),
                     child: TextFormField(
                       decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.email),
+                        prefixIcon: const Icon(Icons.email),
                         labelText: 'Email',
                         filled: true,
                         border: OutlineInputBorder(
@@ -94,7 +94,7 @@ class _AuthPageState extends ModularState<AuthPage, AuthStore> {
                         vertical: 18, horizontal: 40),
                     child: TextFormField(
                       decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.vpn_key),
+                        prefixIcon: const Icon(Icons.vpn_key),
                         suffixIcon: IconButton(
                           onPressed: () {
                             setState(() {
@@ -125,10 +125,10 @@ class _AuthPageState extends ModularState<AuthPage, AuthStore> {
                         vertical: 18, horizontal: 40),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        fixedSize: Size.fromWidth(400),
+                        fixedSize: const Size.fromWidth(400),
                         primary: Colors.blue,
-                        shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(5),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
                         ),
                         padding: const EdgeInsets.only(top: 15, bottom: 15),
                       ),

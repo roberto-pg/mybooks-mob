@@ -16,7 +16,7 @@ class DetailStore extends NotifierStore<Exception, BookModel> {
   })  : _getBookById = getBookById,
         _changeBookStatus = changeBookStatus,
         _deleteBook = deleteBook,
-        super(BookModel(
+        super(const BookModel(
             author: '',
             imageurl: '',
             nationality: '',
@@ -31,7 +31,7 @@ class DetailStore extends NotifierStore<Exception, BookModel> {
       update(response);
       setLoading(false);
     } on Exception catch (e) {
-      setError(BookException('${e.toString()}'));
+      setError(BookException(e.toString()));
     }
   }
 

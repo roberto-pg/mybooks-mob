@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -21,7 +22,7 @@ class SplashStore extends StreamStore<BookException, String> {
       var connectivityResult = await verifyConnectivity();
       String? logged = await _storage.read(key: 'logged');
       if (connectivityResult == ConnectivityResult.none) {
-        return Timer(Duration(seconds: 1), () {
+        return Timer(const Duration(seconds: 1), () {
           dialogFactory(
             'Falha na conexão',
             'Verifique sua conexão com a internet e tente novamente',
@@ -34,19 +35,19 @@ class SplashStore extends StreamStore<BookException, String> {
       if (connectivityResult == ConnectivityResult.wifi ||
           connectivityResult == ConnectivityResult.mobile) {
         if (logged == 'isLogged') {
-          return Timer(Duration(seconds: 1), () {
+          return Timer(const Duration(seconds: 1), () {
             Modular.to.pushReplacementNamed('/home/');
           });
         } else {
-          return Timer(Duration(seconds: 1), () async {
+          return Timer(const Duration(seconds: 1), () async {
             Modular.to.pushReplacementNamed('/auth/');
             await _storage.deleteAll();
           });
         }
       }
     } catch (e, s) {
-      print(e);
-      print(s);
+      log(e.toString());
+      log(s.toString());
     }
   }
 }

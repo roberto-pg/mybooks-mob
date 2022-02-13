@@ -37,11 +37,11 @@ class BookModule extends Module {
     ChildRoute('/',
         child: (_, args) => BookPage(read: args.data),
         transition: TransitionType.rightToLeft,
-        duration: Duration(seconds: 1)),
+        duration: const Duration(seconds: 1)),
     ChildRoute('/detail',
         child: (_, args) => DetailPage(id: args.data),
         transition: TransitionType.rotate,
-        duration: Duration(seconds: 1)),
-    ChildRoute('/addBook', child: (_, __) => AddBookPage()),
+        duration: const Duration(seconds: 1)),
+    ChildRoute('/addBook', child: (_, __) => const AddBookPage()),
   ];
 }

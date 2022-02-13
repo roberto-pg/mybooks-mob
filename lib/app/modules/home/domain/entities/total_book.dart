@@ -8,7 +8,7 @@ class TotalBook extends Equatable {
   final String readBooks;
   final String unreadBooks;
 
-  TotalBook({
+  const TotalBook({
     required this.name,
     required this.allBooks,
     required this.readBooks,

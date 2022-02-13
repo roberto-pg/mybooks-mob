@@ -1,7 +1,7 @@
 import 'package:my_books/app/modules/book/domain/entities/book.dart';
 
 class BookModel extends Book {
-  BookModel({
+  const BookModel({
     String? id,
     required String title,
     required String author,
