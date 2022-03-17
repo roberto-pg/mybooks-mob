@@ -210,10 +210,14 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
             ),
           );
         },
-        onError: (context, error) => const Center(
+        onError: (context, error) => Center(
           child: Text(
-            'Can`t get the Data',
-            style: TextStyle(color: Colors.red),
+            'Falha na autenticação\n\nReinicie o aplicativo',
+            style: GoogleFonts.roboto(
+                textStyle: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            )),
           ),
         ),
       ),

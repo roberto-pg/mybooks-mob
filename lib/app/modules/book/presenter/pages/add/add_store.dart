@@ -20,7 +20,7 @@ class AddStore {
         'Verifique sua conexão com a internet e tente novamente',
         'OK',
         '',
-        () => {},
+        () => Modular.to.navigate('/'),
       );
     }
   }

@@ -19,8 +19,9 @@ class SplashStore extends StreamStore<BookException, String> {
 
   countdownSplash(BuildContext context) async {
     try {
+      bool isTokenExpired = true;
       var token = await _storage.read(key: 'jwt');
-      bool isTokenExpired = JwtDecoder.isExpired(token ?? '');
+      if (token != null) isTokenExpired = JwtDecoder.isExpired(token);
       var connectivityResult = await verifyConnectivity();
       String? logged = await _storage.read(key: 'logged');
       if (connectivityResult == ConnectivityResult.none) {
@@ -38,11 +39,11 @@ class SplashStore extends StreamStore<BookException, String> {
           connectivityResult == ConnectivityResult.mobile) {
         if (logged == 'isLogged' && !isTokenExpired) {
           return Timer(const Duration(seconds: 1), () {
-            Modular.to.pushReplacementNamed('/home/');
+            Modular.to.navigate('/home/');
           });
         } else {
           return Timer(const Duration(seconds: 1), () async {
-            Modular.to.pushReplacementNamed('/auth/');
+            Modular.to.navigate('/auth/');
             await _storage.delete(key: 'logged');
           });
         }
