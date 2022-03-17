@@ -30,7 +30,7 @@ class DetailStore extends NotifierStore<Exception, BookModel> {
       var response = await _getBookById.call(id);
       update(response);
       setLoading(false);
-    } on Exception catch (e) {
+    } catch (e) {
       setError(BookException(e.toString()));
     }
   }
@@ -38,16 +38,16 @@ class DetailStore extends NotifierStore<Exception, BookModel> {
   Future<void> changeBookStatus(String id, String read) async {
     try {
       await _changeBookStatus.call(id, read);
-    } on Exception catch (e) {
-      throw Exception(e);
+    } catch (e) {
+      throw BookException(e.toString());
     }
   }
 
   Future<void> deleteBook(String id) async {
     try {
       await _deleteBook.call(id);
-    } on Exception catch (e) {
-      throw Exception(e);
+    } catch (e) {
+      throw BookException(e.toString());
     }
   }
 }

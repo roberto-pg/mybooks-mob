@@ -23,6 +23,7 @@ dependencies:
   http_parser: ^4.0.0
   validatorless: ^1.2.1
   flutter_dotenv: ^5.0.2
+  jwt_decoder: ^2.0.1
 
 dev_dependencies:
   flutter_test:

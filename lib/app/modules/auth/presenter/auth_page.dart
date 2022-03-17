@@ -3,7 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_books/app/modules/auth/domain/entities/user.dart';
 import 'package:my_books/app/modules/auth/external/user_model.dart';
-import 'package:my_books/shared/alerts/dialog_factory.dart';
+import 'package:my_books/shared/alerts/alert_factory.dart';
 import 'package:validatorless/validatorless.dart';
 
 import 'auth_store.dart';
@@ -28,7 +28,7 @@ class _AuthPageState extends ModularState<AuthPage, AuthStore> {
   void initState() {
     super.initState();
     store.selectError.listen((event) {
-      dialogFactory(
+      alertFactory(
         'Falha na autenticação',
         event.message,
         '',

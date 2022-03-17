@@ -50,7 +50,7 @@ class HomeStore extends NotifierStore<Exception, TotalBookModel> {
 
       update(totalsForDrawer);
       setLoading(false);
-    } on Exception catch (e) {
+    } catch (e) {
       setError(BookException(e.toString()));
     }
   }

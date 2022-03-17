@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:my_books/app/modules/book/domain/usecases/add_book.dart';
-import 'package:my_books/shared/alerts/dialog_factory.dart';
+import 'package:my_books/shared/alerts/alert_factory.dart';
 
 class AddStore {
   final AddBook _addBook;
@@ -13,9 +13,9 @@ class AddStore {
     try {
       await _addBook.call(params);
       Modular.to.navigate('/home/');
-    } on Exception catch (e) {
+    } catch (e) {
       log(e.toString());
-      dialogFactory(
+      alertFactory(
         'Falha na conexão',
         'Verifique sua conexão com a internet e tente novamente',
         'OK',

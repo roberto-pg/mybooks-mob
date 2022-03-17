@@ -8,7 +8,7 @@ import 'package:http_parser/http_parser.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:my_books/app/modules/book/domain/entities/book.dart';
 import 'package:my_books/app/modules/book/presenter/pages/add/add_store.dart';
-import 'package:my_books/shared/alerts/dialog_factory.dart';
+import 'package:my_books/shared/alerts/alert_factory.dart';
 import 'package:validatorless/validatorless.dart';
 
 class AddBookPage extends StatefulWidget {
@@ -152,7 +152,7 @@ class _AddBookState extends ModularState<AddBookPage, AddStore> {
                         _formKey.currentState!.save();
 
                         if (imageBook == null) {
-                          return dialogFactory(
+                          return alertFactory(
                             'Falha na operação',
                             'Selecione uma imagem de capa para enviar',
                             '',

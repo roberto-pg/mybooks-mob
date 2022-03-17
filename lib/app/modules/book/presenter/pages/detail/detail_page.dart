@@ -4,7 +4,7 @@ import 'package:flutter_triple/flutter_triple.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:my_books/app/modules/book/external/book_model.dart';
 import 'package:my_books/app/modules/book/presenter/pages/detail/detail_store.dart';
-import 'package:my_books/shared/alerts/dialog_factory.dart';
+import 'package:my_books/shared/alerts/alert_factory.dart';
 
 class DetailPage extends StatefulWidget {
   final String id;
@@ -177,7 +177,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                           elevation: 4.0,
                         ),
                         onPressed: () {
-                          dialogFactory(
+                          alertFactory(
                             'Confirmação',
                             'Deseja alterar o Status do livro ?',
                             'Sim',
@@ -194,7 +194,7 @@ class _DetailBookState extends ModularState<DetailPage, DetailStore> {
                           elevation: 4.0,
                         ),
                         onPressed: () {
-                          dialogFactory(
+                          alertFactory(
                             'Confirmação',
                             'Confirma a exclusão do livro ?',
                             'Sim',

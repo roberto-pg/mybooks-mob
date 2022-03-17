@@ -6,7 +6,6 @@ import 'package:my_books/shared/errors/exceptions.dart';
 
 class AuthDatasourceImpl implements IAuthDatasource {
   final CustomDio _customDio;
-  // final FlutterSecureStorage _storage;
 
   AuthDatasourceImpl({required CustomDio customDio}) : _customDio = customDio;
 
