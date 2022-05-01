@@ -7,12 +7,18 @@
     {
       "name": "mybooks_triple",
       "request": "launch",
-      "type": "dart"
+      "type": "dart",
+      "args": [
+        "--dart-define=baseUrl=http://134.122.116.89:3333"
+      ]
     },
     {
       "name": "mybooks_triple (profile mode)",
       "request": "launch",
       "type": "dart",
+      "args": [
+        "--dart-define=baseUrl=http://134.122.116.89:3333"
+      ]
     }
   ]
 }
