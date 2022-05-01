@@ -1,5 +1,5 @@
 # Miscellaneous
-.vscode
+.vscode/
 .env
 *.class
 *.log
