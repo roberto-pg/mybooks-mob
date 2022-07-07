@@ -18,7 +18,8 @@ class AddBookPage extends StatefulWidget {
   _AddBookState createState() => _AddBookState();
 }
 
-class _AddBookState extends ModularState<AddBookPage, AddStore> {
+class _AddBookState extends State<AddBookPage> {
+  final store = Modular.get<AddStore>();
   final _formKey = GlobalKey<FormState>();
   File? imageBook;
   Book book = const Book(

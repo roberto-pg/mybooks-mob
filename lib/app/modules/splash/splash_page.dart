@@ -9,7 +9,8 @@ class SplashPage extends StatefulWidget {
   SplashPageState createState() => SplashPageState();
 }
 
-class SplashPageState extends ModularState<SplashPage, SplashStore> {
+class SplashPageState extends State<SplashPage> {
+  final store = Modular.get<SplashStore>();
   @override
   void initState() {
     super.initState();

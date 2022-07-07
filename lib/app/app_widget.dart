@@ -9,12 +9,13 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     portraitModeOnly();
-    return MaterialApp(
+    return MaterialApp.router(
       builder: asuka.builder,
-      initialRoute: "/",
       title: 'My Books',
       theme: ThemeData(primarySwatch: Colors.blue),
       debugShowCheckedModeBanner: false,
-    ).modular();
+      routeInformationParser: Modular.routeInformationParser,
+      routerDelegate: Modular.routerDelegate,
+    );
   }
 }

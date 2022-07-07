@@ -1,6 +1,6 @@
 name: my_books
 description: A new Flutter project.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  flutter_modular: ^4.0.1+2
+  flutter_modular: ^5.0.3
   flutter_triple: ^1.2.4+3
   equatable: ^2.0.3
   dio: ^4.0.0
@@ -23,6 +23,7 @@ dependencies:
   http_parser: ^4.0.0
   validatorless: ^1.2.1
   jwt_decoder: ^2.0.1
+  modular_triple_bind: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -38,4 +39,4 @@ flutter:
   fonts:
     - family: Pacifico
       fonts:
-       - asset: lib/assets/fonts/Pacifico-Regular.ttf
+        - asset: lib/assets/fonts/Pacifico-Regular.ttf

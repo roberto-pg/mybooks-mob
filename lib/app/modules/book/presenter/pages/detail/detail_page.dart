@@ -14,7 +14,8 @@ class DetailPage extends StatefulWidget {
   State<DetailPage> createState() => _DetailBookState();
 }
 
-class _DetailBookState extends ModularState<DetailPage, DetailStore> {
+class _DetailBookState extends State<DetailPage> {
+  final store = Modular.get<DetailStore>();
   int _radioValue = 2;
 
   @override

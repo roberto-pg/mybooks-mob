@@ -13,7 +13,8 @@ class BookPage extends StatefulWidget {
   BookPageState createState() => BookPageState();
 }
 
-class BookPageState extends ModularState<BookPage, BookStore> {
+class BookPageState extends State<BookPage> {
+  final store = Modular.get<BookStore>();
   String? title;
   @override
   void initState() {

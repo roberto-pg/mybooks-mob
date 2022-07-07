@@ -15,7 +15,8 @@ class AuthPage extends StatefulWidget {
   _AuthPageState createState() => _AuthPageState();
 }
 
-class _AuthPageState extends ModularState<AuthPage, AuthStore> {
+class _AuthPageState extends State<AuthPage> {
+  final store = Modular.get<AuthStore>();
   final _formKey = GlobalKey<FormState>();
   bool obscuredTextPassword = true;
   User user = const User(

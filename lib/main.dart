@@ -11,7 +11,10 @@ Future<void> main() async {
     log(Modular.to.path);
   });
 
-  runApp(ModularApp(module: AppModule(), child: const AppWidget()));
+  runApp(ModularApp(
+    module: AppModule(),
+    child: const AppWidget(),
+  ));
 }
 
 class MyHttpOverrides extends HttpOverrides {
